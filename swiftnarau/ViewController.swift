@@ -11,8 +11,8 @@ import UIKit
 class ViewController: UIKit.UIViewController {
 
     
-    @IBOutlet var myButton : UIButton
-    @IBOutlet var myTextfield1 : UITextField
+    @IBOutlet var myButton : UIButton!
+    @IBOutlet var myTextfield1 : UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +29,12 @@ class ViewController: UIKit.UIViewController {
     }
     
     func handler(response: NSURLResponse!, returneddata : NSData!, error : NSError!) {
-        if(error){
+        if(error != nil){
             println(error)
         }
         var mydata = NSString(data:returneddata, encoding:NSUTF8StringEncoding)
         NSOperationQueue.mainQueue().addOperationWithBlock {
-            if(error) {
+            if(error != nil) {
                 self.myTextfield1.text = error.localizedDescription
             }
             else{
@@ -46,7 +46,7 @@ class ViewController: UIKit.UIViewController {
     
     func getStockPrice(sym : String, funcptr: (response: NSURLResponse!, returneddata : NSData!, error: NSError!) -> Void )  {
         let urlPath: String = "http://download.finance.yahoo.com/d/quotes.csv?s="+sym+"&f=sb2b3jk"
-        var url = NSURL(string: urlPath)
+        var url:NSURL = NSURL(string: urlPath)!
         var req = NSURLRequest(URL: url)
         NSURLConnection.sendAsynchronousRequest(req, queue:NSOperationQueue(), completionHandler:funcptr)
         //Why did I make getStockPrice take a function pointer instead of just putting "handler" directly?
