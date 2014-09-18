@@ -8,23 +8,21 @@
 
 import UIKit
 
-class ViewController: UIKit.UIViewController {
+public class StockMarketViewController: UIKit.UIViewController {
 
-    
-    @IBOutlet var myButton : UIButton!
     @IBOutlet var myTextfield1 : UITextField!
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
+    override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    override func shouldAutorotate() -> Bool {
+    override public func shouldAutorotate() -> Bool {
         return false
     }
     
@@ -44,7 +42,7 @@ class ViewController: UIKit.UIViewController {
     }
     
     
-    func getStockPrice(sym : String, funcptr: (response: NSURLResponse!, returneddata : NSData!, error: NSError!) -> Void )  {
+   public func getStockPrice(sym : String, funcptr: (response: NSURLResponse!, returneddata : NSData!, error: NSError!) -> Void )  {
         let urlPath: String = "http://download.finance.yahoo.com/d/quotes.csv?s="+sym+"&f=sb2b3jk"
         var url:NSURL = NSURL(string: urlPath)!
         var req = NSURLRequest(URL: url)

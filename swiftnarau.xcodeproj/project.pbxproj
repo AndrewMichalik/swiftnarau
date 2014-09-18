@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		7A3098191954B52D00E06724 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3098181954B52D00E06724 /* AppDelegate.swift */; };
 		7A30981C1954B52D00E06724 /* swiftnarau.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A30981A1954B52D00E06724 /* swiftnarau.xcdatamodeld */; };
-		7A30981E1954B52D00E06724 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A30981D1954B52D00E06724 /* ViewController.swift */; };
+		7A30981E1954B52D00E06724 /* StockMarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A30981D1954B52D00E06724 /* StockMarketViewController.swift */; };
 		7A3098211954B52D00E06724 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A30981F1954B52D00E06724 /* Main.storyboard */; };
 		7A3098231954B52D00E06724 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A3098221954B52D00E06724 /* Images.xcassets */; };
 		7A30982F1954B52D00E06724 /* swiftnarauTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A30982E1954B52D00E06724 /* swiftnarauTests.swift */; };
@@ -44,7 +44,7 @@
 		7A3098171954B52D00E06724 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A3098181954B52D00E06724 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A30981B1954B52D00E06724 /* swiftnarau.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = swiftnarau.xcdatamodel; sourceTree = "<group>"; };
-		7A30981D1954B52D00E06724 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7A30981D1954B52D00E06724 /* StockMarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockMarketViewController.swift; sourceTree = "<group>"; };
 		7A3098201954B52D00E06724 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A3098221954B52D00E06724 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7A3098281954B52D00E06724 /* swiftnarauTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swiftnarauTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,7 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				7A3098181954B52D00E06724 /* AppDelegate.swift */,
-				7A30981D1954B52D00E06724 /* ViewController.swift */,
+				7A30981D1954B52D00E06724 /* StockMarketViewController.swift */,
 				7A30981F1954B52D00E06724 /* Main.storyboard */,
 				7A3098221954B52D00E06724 /* Images.xcassets */,
 				7A30981A1954B52D00E06724 /* swiftnarau.xcdatamodeld */,
@@ -227,7 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A30981E1954B52D00E06724 /* ViewController.swift in Sources */,
+				7A30981E1954B52D00E06724 /* StockMarketViewController.swift in Sources */,
 				7A3098191954B52D00E06724 /* AppDelegate.swift in Sources */,
 				7A30981C1954B52D00E06724 /* swiftnarau.xcdatamodeld in Sources */,
 			);

@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import UIKit
 import swiftnarau
 
 class swiftnarauTests: XCTestCase {
@@ -49,15 +50,21 @@ class swiftnarauTests: XCTestCase {
         func mycallback(response: NSURLResponse!, returneddata : NSData!, error : NSError!) {
             self.isTestComplete = true
             var mydata = NSString(data:returneddata, encoding:NSUTF8StringEncoding)
-            if(error){
+            if(error != nil){
                 XCTFail(error.localizedDescription)
             }
-            if ( !((mydata as NSString).containsString(stocksymbol)) ) {
-                XCTFail("Didn't find stock symbol "+stocksymbol+" in returned data: "+mydata)
+            if ( !((mydata! as NSString).containsString(stocksymbol)) ) {
+                XCTFail("Didn't find stock symbol "+stocksymbol+" in returned data: "+mydata!)
             }
         }
+
+        var smvc = UIStoryboard(name:"Main",bundle:nil).instantiateViewControllerWithIdentifier("StockMarketViewController") as swiftnarau.StockMarketViewController
         
-        swiftnarau.ViewController().getStockPrice(stocksymbol,mycallback)
+        //The fact that I had to make methods public in the application code for the sole purpose of allowing
+        //this unittest to be able to call its methods, kinda bothers me. Perhaps that means I shouldn't have
+        //the getStockPrice() method as part of the ViewController at all. Maybe every method that I'd like to unittest
+        //should be a method of a standalone class(e.g. "class MyAppCoreActions"), in its own file called MyAppCoreActions.swift
+        smvc.getStockPrice(stocksymbol,mycallback)
         self.waitForAsync()
     }
     
