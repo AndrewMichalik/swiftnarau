@@ -16,12 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jUr-PZ-xWJ" userLabel="myTextfield1">
-                                <rect key="frame" x="18" y="52" width="442" height="30"/>
-                                <accessibility key="accessibilityConfiguration" label="myTextfield1"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter a stock symbol." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJc-fr-bJc">
                                 <rect key="frame" x="20" y="31" width="167" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -40,6 +34,12 @@
                                     <action selector="buttonPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Hmy-AI-Stu"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jUr-PZ-xWJ" userLabel="myTextfield1">
+                                <rect key="frame" x="16" y="54" width="289" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="myTextfield1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.92156869173049927" green="0.85882359743118286" blue="0.58431375026702881" alpha="1" colorSpace="deviceRGB"/>
                     </view>
